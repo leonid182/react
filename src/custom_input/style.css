@@ -1,0 +1,11 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 25px;
+}
+
+.input span {
+    margin-bottom: 25px;
+}
+

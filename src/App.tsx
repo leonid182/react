@@ -3,7 +3,8 @@ import React  from 'react';
 
 import './App.css';
 import { ProductCard } from './ProductCard';
-
+import { CustomInput } from './custom_input';
+ 
 const productArray = [
 {
   id:1,
@@ -23,16 +24,23 @@ function App() {
   return (
     
       
-          <div className="App">
-           {/* <ProductCard  productName='orange'/> */}
-           {productArray.map(({id,name})=> 
-           <ProductCard  productName={name} key = {id}/>
-           )}
+          <div>
+            <div className="App">
+             {/* <ProductCard  productName='orange'/> */}
+             {productArray.map(({id,name})=> 
+             <ProductCard  productName={name} key = {id}/>
+             )}
+  
+            </div>
+            <div> 
+            <CustomInput/>
+            </div>
           </div>
       
       
    
   );
-}
+};
 
-export default App;
+
+export default App; 

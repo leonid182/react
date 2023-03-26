@@ -8,10 +8,10 @@ interface IProps  {
 }
 export const ProductCard = ({productName}:IProps)=>{
    let [count, setCount] = useState(0);
-   let [limit, setLimit] = useState(0);
+   
  
     const Add=()=>{
-        let stop = document.getElementsByClassName('button-add');
+        
         setCount(count++);
        
       
