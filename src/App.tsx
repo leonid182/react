@@ -1,7 +1,10 @@
 import React  from 'react';
 import { MainPage } from './Containers/MainPage';
-import styles from "./App.module.css";
-
+import { PostPage } from './Containers/PostsPage';
+import styles from "./App.module.scss";
+import {Routes, Route} from 'react-router-dom';
+import { ContactsPage } from './Containers/ContactPage';
+import { Layout } from './Components/Commons/layouts';
 
 function App() {
   
@@ -10,7 +13,18 @@ function App() {
       
           
             <div className={styles.wrapper}>
-            <MainPage/>
+           <Layout>
+              <Routes>
+                  <Route path='/' element={<MainPage/>}/>
+                  <Route path='/post'>
+                    <Route element={<PostPage/>} index/>
+                    <Route path=':id' element={<PostPage/>} index/>
+                    <Route path='contacts' element={<ContactsPage/>} />
+                  </Route>
+                 
+              </Routes>
+           </Layout>
+            
           </div>
       
       

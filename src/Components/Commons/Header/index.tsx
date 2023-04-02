@@ -1,14 +1,17 @@
 import React from "react";
-import styles from "./Header.module.css"
+import styles from "./Header.module.scss"
+import { Link } from "react-router-dom";
+import { useState } from "react";
 export const Header =()=>{
     return <header>
         <nav className={styles.nav}>
             <ul>
                 <li>
-                <a href="">Main</a>
-                <a href="">About Us</a>
-                <a href="">Contacts</a>
-                <a href="">Blog</a>
+                <Link to="/">Main</Link>
+                <Link to="/post">PostPage</Link>
+                <Link to="/post/111111" state={"test.state"}>PostPage 11111 </Link>
+                
+                
                 </li>
             </ul>
         </nav>
