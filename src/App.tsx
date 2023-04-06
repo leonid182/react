@@ -5,7 +5,9 @@ import styles from "./App.module.scss";
 import {Routes, Route} from 'react-router-dom';
 import { ContactsPage } from './Containers/ContactPage';
 import { Layout } from './Components/Commons/layouts';
-import { log } from 'console';
+import { Auth } from './Containers/AuthPage';
+import {routes} from "./utils/constants/routes";
+
 
 function App() {
   console.log('APP RENDER');
@@ -22,9 +24,10 @@ function App() {
             <div className={styles.wrapper}>
            <Layout>
               <Routes>
-                  <Route path='/' element={<MainPage/>}/>
-                  <Route path='/post' element={<PostPage/>}/>
-                  <Route path='/contacts' element={<ContactsPage/>}/>
+                  <Route path={routes.MAIN} element={<MainPage/>}/>
+                  <Route path={routes.POSTS} element={<PostPage/>}/>
+                  <Route path={routes.PRODUCTS} element={<ContactsPage/>}/>
+                  <Route path={routes.AUTH} element={<Auth/>}/>
                  
                     
                   

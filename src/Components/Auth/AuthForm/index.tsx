@@ -3,50 +3,33 @@ import { CustomInput } from '../../Commons/custom_input';
 import styles from './AuthForm.module.scss';
 
 export const AuthForm = () => {
-  const [formState, setFormState] = useState({
-    email: '',
-    password: '',
-  });
 
-  const [isError, setIsError] = useState(false);
+  const [formstate, setformstate]=useState({
+    email:'',
+    password:''
+  })
 
-  const handleChangeFieldForm = (fieldName: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormState((prevValues) => ({ ...prevValues, [fieldName]: e.target.value }));
-  };
+  const handleChangeFieldForm = (fieldName:string)=>(e:React.ChangeEvent<HTMLInputElement>)=>{
 
-  const handleFinishForm = () => {
-    if (formState.password.length < 5) {
-      setIsError(true);
-    } else {
-      console.log('Auth');
-    }
-  };
+  }
 
-  useEffect(() => {
-    if (isError && formState.password.length > 5) {
-      setIsError(false);
-    }
-  }, [formState.password]);
 
   return (
     <div>
       <CustomInput
-        fieldLabel="Email"
-        fieldName="email"
-        value={formState.email}
-        handleChangeFieldForm={handleChangeFieldForm}
+        fieldLabel="Email" 
+        fieldName='Email'  
+        value='' 
+            
       />
       <CustomInput
         fieldLabel="Password"
         fieldName="password"
-        value={formState.password}
+        value=''
         type="password"
-        handleChangeFieldForm={handleChangeFieldForm}
+        
       />
-      <span className={`${styles.errorTitle} ${isError ? styles.hasError : styles.noError}`}>
-        Пароль должен быть больше 5 символов
-      </span>
-      <button onClick={handleFinishForm}>AUTH</button>
+      
     </div>
   );
 };

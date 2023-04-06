@@ -15,7 +15,7 @@ export const MainPage =()=>{
            
             <h1>Hello, MAINPAGE</h1>
             <MainInfo/>
-            <AuthForm/>
+            
         </div>
        
         
