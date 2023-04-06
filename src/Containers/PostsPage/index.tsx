@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Header } from "../../Components/Commons/Header";
 import { Footer } from "../../Components/Commons/Footer";
 import { PostCard } from "../../Components/Posts/PostCard";
 import styles from "./PostPage.module.scss";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { CustomInput } from "../../Components/Commons/custom_input";
+import { ProductCard } from "../../Components/Products/ProductCard";
 
 
 export const PostPage =()=>{
@@ -18,7 +20,8 @@ export const PostPage =()=>{
     const forward=()=>{
         navigation(+1);
     }
-    
+//     useEffect(()=>{console.log("COMPONENTDIDMOUNT APP");
+//   }, []);
     return (
         
     <div className={styles.postPageWrapper}>
@@ -27,16 +30,14 @@ export const PostPage =()=>{
             
             <div className={styles.postList}>
                 <PostCard/>
+                
              
                
                 
                 
                 </div>
 
-                <div>
-                    <button onClick={back}>Back</button>
-                    <button onClick={forward}>Forward</button>
-                </div>
+               
             
         </div>
        

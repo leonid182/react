@@ -1,0 +1,14 @@
+.card_wrapper {
+  padding: 20px;
+  /* border: 1px solid brown; */
+  border-radius: 8px;
+ 
+}
+
+.button_section {
+  display: flex;
+  gap: 20px;
+  background-color: red;
+}
+
+

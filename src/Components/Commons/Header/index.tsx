@@ -9,7 +9,9 @@ export const Header =()=>{
                 <li>
                 <Link to="/">Main</Link>
                 <Link to="/post">PostPage</Link>
-                <Link to="/post/111111" state={"test.state"}>PostPage 11111 </Link>
+                <Link to="/contacts">Contacts</Link>
+
+                {/* <Link to="/contacts" state={"test.state"}>PostPage 11111 </Link> */}
                 
                 
                 </li>
