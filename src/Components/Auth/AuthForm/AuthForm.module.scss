@@ -1,6 +1,7 @@
 .errorTitle {
-  display: block;
+  display: none;
   &.hasError {
+    display: block;
     color: red;
   }
   &.noError {
