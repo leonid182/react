@@ -7,7 +7,7 @@ import { ContactsPage } from './Containers/ContactPage';
 import { Layout } from './Components/Commons/layouts';
 import { Auth } from './Containers/AuthPage';
 import {routes} from "./utils/constants/routes";
-
+import {CheckOuts} from "./Components/Commons/checkOuts/index"
 
 function App() {
   console.log('APP RENDER');
@@ -24,9 +24,9 @@ function App() {
             <div className={styles.wrapper}>
            <Layout>
               <Routes>
-                  <Route path={routes.MAIN} element={<MainPage/>}/>
-                  <Route path={routes.POSTS} element={<PostPage/>}/>
-                  <Route path={routes.PRODUCTS} element={<ContactsPage/>}/>
+                  <Route path={routes.MAIN} element={<CheckOuts><MainPage/></CheckOuts>}/>
+                  <Route path={routes.POSTS} element={<CheckOuts><PostPage/></CheckOuts>}/>
+                  <Route path={routes.PRODUCTS} element={<CheckOuts><ContactsPage/></CheckOuts>}/>
                   <Route path={routes.AUTH} element={<Auth/>}/>
                  
                     

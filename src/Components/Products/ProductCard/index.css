@@ -11,4 +11,12 @@
   background-color: red;
 }
 
+.appear {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
 

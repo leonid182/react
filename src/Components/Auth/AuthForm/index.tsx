@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { CustomInput } from '../../Commons/custom_input';
 import styles from './AuthForm.module.scss';
-
+import {setUserData} from '../../../store/userData/index';
+import { useDispatch } from 'react-redux';
+import {useSelector} from 'react-redux'
 export const AuthForm = () => {
+
+  const dispatch = useDispatch();
+  const selector = useSelector((state:any)=>{state.userData});
+  console.log(selector);
+  
 
   const [formstate, setformstate]=useState({
     email:'',
@@ -22,6 +29,11 @@ export const AuthForm = () => {
     if(formstate.password.length<5){
       setIsError(true)
     }else{
+  dispatch(setUserData({
+    token: 'token', email: formstate.email,
+    
+  }));
+      
     console.log('Auth');
   }
     
